@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Testes de Lógica</string>
+    <string name="escolha_item">Escolha um dos itens abaixo:</string>
+    <string name="soma">Soma</string>
+    <string name="erro_digite_numero">Digite o numero desejado nos campos!</string>
+    <string name="calcular">Calcular</string>
+    <string name="multiplicacao">Multiplicação</string>
+    <string name="voltar">Voltar</string>
+    <string name="desconto">Aplicar desconto</string>
+    <string name="historico_calculo">Ultima soma:</string>
+    <string name="historico_desconto">Ultimo desconto:</string>
+    <string name="nenhum_dado">Nenhum dado</string>
+</resources>
