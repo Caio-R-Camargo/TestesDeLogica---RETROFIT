@@ -7,6 +7,7 @@ class DevelopConstants private constructor() {
 
         const val VALOR_CALCULO = "calculo"
         const val VALOR_DESCONTO = "desconto"
+        const val DARKMODE = "darkmode"
 
     }
 

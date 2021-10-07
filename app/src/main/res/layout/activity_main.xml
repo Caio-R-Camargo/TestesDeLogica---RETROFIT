@@ -5,12 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_gray"
     tools:context=".ui.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
 
         <TextView
             android:id="@+id/text_tittle"
@@ -19,6 +22,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="32dp"
             android:text="@string/soma"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -29,9 +33,12 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
             android:hint="Produto 1"
             android:inputType="number"
-            android:maxLength="8" />
+            android:maxLength="8"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
         <EditText
             android:id="@+id/editText2"
@@ -40,17 +47,18 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
             android:hint="Produto 2"
             android:inputType="number"
-            android:maxLength="8" />
+            android:maxLength="8"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
         <Button
             android:id="@+id/button_calculo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             android:padding="10dp"
             android:text="@string/calcular" />
 
@@ -61,6 +69,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:text="RESULT"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="gone"
@@ -79,9 +89,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="2"
+                android:backgroundTint="@color/white"
                 android:hint="Desconto"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:maxLength="3"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:visibility="gone"
                 tools:visibility="visible" />
 
@@ -89,8 +102,8 @@
                 android:id="@+id/text_percent"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="10dp"
                 android:text="%"
+                android:textColor="@color/white"
                 android:textSize="24sp"
                 android:visibility="gone"
                 tools:visibility="visible" />
@@ -101,13 +114,18 @@
             android:id="@+id/butto_desconto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
             android:padding="10dp"
             android:text="@string/desconto"
             android:visibility="gone"
             tools:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="?attr/colorOnBackground" />
 
         <TextView
             android:id="@+id/text_desconto_view"
@@ -116,6 +134,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:text="Total do desconto:"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="gone"
@@ -127,6 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="0"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="gone"
@@ -139,6 +159,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:text="Valor total a pagar:"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="gone"
@@ -150,17 +171,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="0"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:visibility="gone"
             tools:visibility="visible" />
 
         <View
-            android:layout_width="300dp"
+            android:id="@+id/view_last_line"
+            android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:background="@color/purple_700" />
+            android:background="?attr/colorOnBackground"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -168,7 +193,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:background="@color/purple_500"
+            android:background="?attr/colorPrimary"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -193,11 +218,11 @@
                 android:textStyle="bold" />
 
             <View
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
-                android:background="@color/white" />
+                android:background="?attr/colorOnBackground" />
 
             <TextView
                 android:id="@+id/last_update_desconto_text"
@@ -223,18 +248,40 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/button_gerate_pdf"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:drawableLeft="@drawable/ic_baseline_back_24"
+            android:layout_marginTop="8dp"
+            android:drawableRight="@drawable/ic_baseline_picture_as_pdf_24"
+            android:drawableTint="@color/white"
+            android:padding="10dp"
+            android:paddingTop="0dp"
+            android:text="Salvar"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="?attr/colorOnBackground" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:drawableRight="@drawable/ic_baseline_back_24"
+            android:drawableTint="@color/white"
+            android:padding="10dp"
             android:text="@string/voltar"
-            android:textAllCaps="true"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imageView3"

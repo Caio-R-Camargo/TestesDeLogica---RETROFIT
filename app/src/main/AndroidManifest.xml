@@ -2,13 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.testesdelgica">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_app"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/icon_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestesDeLógica">
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.InitActivity"
             android:exported="true">
@@ -20,7 +27,7 @@
         </activity>
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>

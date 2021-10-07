@@ -10,4 +10,8 @@
     <string name="historico_calculo">Ultima soma:</string>
     <string name="historico_desconto">Ultimo desconto:</string>
     <string name="nenhum_dado">Nenhum dado</string>
+    <string name="verificacao">Verificação.</string>
+    <string name="dedo_sensor">Por favor, coloque seu dedo no sensor.</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="configurações">Configurações</string>
 </resources>

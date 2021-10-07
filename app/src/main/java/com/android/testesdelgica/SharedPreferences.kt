@@ -14,4 +14,12 @@ class SharedPreferences(context: Context) {
         return mSharedPreferences.getString(key, "") ?: ""
     }
 
+    fun storeBoolean(key: String, value: Boolean){
+        mSharedPreferences.edit().putBoolean(key, value).apply()
+    }
+
+    fun getBoolean(key: String): Boolean{
+        return mSharedPreferences.getBoolean(key, false)
+    }
+
 }
