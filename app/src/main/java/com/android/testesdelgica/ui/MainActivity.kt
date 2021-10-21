@@ -91,7 +91,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.buttoDesconto.setOnClickListener {
-
             val value = binding.editDesconto.text.toString()
 
             if (value != "") {
@@ -172,5 +171,7 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 
 }

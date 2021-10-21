@@ -74,8 +74,12 @@ class InitActivity : AppCompatActivity() {
     private fun setListeners() {
         binding.buttonSoma.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
-            finish()
             Toast.makeText(applicationContext, "Soma selecionado", Toast.LENGTH_LONG).show()
+        }
+
+        binding.buttonApi.setOnClickListener {
+            startActivity(Intent(this, ApiActivity::class.java))
+            Toast.makeText(applicationContext, "Api selecionado", Toast.LENGTH_LONG).show()
         }
     }
 
